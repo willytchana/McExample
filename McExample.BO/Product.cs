@@ -15,6 +15,7 @@ namespace McExample.BO
         public float Tax { get; set; }
         public byte[] Picture { get; set; }
         public string Logo { get; set; }
+        public string Category { get; set; }
 
         public Product()//pour les sérialisations
         {
