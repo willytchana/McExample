@@ -12,16 +12,25 @@ namespace McExample.WinForms
         public string Name { get; set; }
         public double Price { get; set; }
         public byte[] Picture { get; set; }
-        public byte[] Logo { get; set; }
+        public string CompanyName { get; set; }
+        public string CompanyEmail { get; set; }
+        public string CompanyPhoneNumber { get; set; }
+        public string CompanyPostalCode { get; set; }
+        public byte[] CompanyLogo { get; set; }
 
-        public ProductListPrint(string reference, string name, 
-            double price, byte[] picture, byte[] logo)
+        public ProductListPrint(string reference, string name, double price, byte[] picture, 
+            string companyName, string companyEmail, 
+            string companyPhoneNumber, string companyPostalCode, byte[] companyLogo)
         {
             Reference = reference;
             Name = name;
             Price = price;
             Picture = picture;
-            Logo = logo;
+            CompanyName = companyName;
+            CompanyEmail = companyEmail;
+            CompanyPhoneNumber = companyPhoneNumber;
+            CompanyPostalCode = companyPostalCode;
+            CompanyLogo = companyLogo;
         }
     }
 }

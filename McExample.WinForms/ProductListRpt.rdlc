@@ -22,7 +22,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.7112cm</Top>
+        <Top>1.12544cm</Top>
         <Left>4.01849cm</Left>
         <Height>0.70583cm</Height>
         <Width>10.46396cm</Width>
@@ -474,7 +474,7 @@
         <Top>2.00766cm</Top>
         <Left>0.3937cm</Left>
         <Height>3.07234cm</Height>
-        <Width>15.54396cm</Width>
+        <Width>15.54395cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -484,7 +484,7 @@
       </Tablix>
       <Image Name="Image3">
         <Source>Database</Source>
-        <Value>=First(Fields!Logo.Value, "DataSet1")</Value>
+        <Value>=First(Fields!CompanyLogo.Value, "DataSet1")</Value>
         <MIMEType>image/png</MIMEType>
         <Sizing>FitProportional</Sizing>
         <Top>0.33127cm</Top>
@@ -498,6 +498,38 @@
           </Border>
         </Style>
       </Image>
+      <Textbox Name="CompanyName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!CompanyName.Value, "DataSet1")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>CompanyName</rd:DefaultName>
+        <Top>0.33127cm</Top>
+        <Left>4.01849cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.46396cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
@@ -524,10 +556,140 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.3937cm</Top>
+          <Top>0.61595cm</Top>
           <Left>13.43766cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="CompanyPhoneNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!CompanyPhoneNumber.Value, "DataSet1")</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>CompanyPhoneNumber</rd:DefaultName>
+          <Top>0.73935cm</Top>
+          <Left>0.38841cm</Left>
+          <Height>0.49417cm</Height>
+          <Width>6.28354cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="CompanyPostalCode">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!CompanyPostalCode.Value, "DataSet1")</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>CompanyPostalCode</rd:DefaultName>
+          <Top>0.07938cm</Top>
+          <Left>8.23828cm</Left>
+          <Height>0.49417cm</Height>
+          <Width>4.16688cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="CompanyEmail">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!CompanyEmail.Value, "DataSet1")</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>CompanyEmail</rd:DefaultName>
+          <Top>0.07761cm</Top>
+          <Left>0.41487cm</Left>
+          <Height>0.49417cm</Height>
+          <Width>6.28354cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox13">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>BP:</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox13</rd:DefaultName>
+          <Top>0.07938cm</Top>
+          <Left>7.35224cm</Left>
+          <Height>0.49417cm</Height>
+          <Width>0.88604cm</Width>
+          <ZIndex>4</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -571,9 +733,25 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Logo">
-          <DataField>Logo</DataField>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompanyLogo">
+          <DataField>CompanyLogo</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompanyPhoneNumber">
+          <DataField>CompanyPhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompanyPostalCode">
+          <DataField>CompanyPostalCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Name">
           <DataField>Name</DataField>
