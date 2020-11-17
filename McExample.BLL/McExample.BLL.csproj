@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="CompanyBLO.cs" />
     <Compile Include="ProductBLO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypingException.cs" />

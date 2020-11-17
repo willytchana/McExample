@@ -14,7 +14,6 @@ namespace McExample.BO
         public double UnitPrice { get; set; }
         public float Tax { get; set; }
         public byte[] Picture { get; set; }
-        public string Logo { get; set; }
         public string Category { get; set; }
 
         public Product()//pour les sérialisations
@@ -23,14 +22,13 @@ namespace McExample.BO
         }
 
         public Product(string reference, string name, double unitPrice,
-            float tax, byte[] picture, string logo)
+            float tax, byte[] picture)
         {
             Reference = reference;
             Name = name;
             UnitPrice = unitPrice;
             Tax = tax;
             Picture = picture;
-            Logo = logo;
         }
 
         public override bool Equals(object obj)
