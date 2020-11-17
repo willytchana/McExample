@@ -116,20 +116,7 @@ namespace McExample.WinForms
             List<ProductListPrint> items = new List<ProductListPrint>();
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                Product p = dataGridView1.Rows[i].DataBoundItem as Product;
-                byte[] logo = null;
-                if(!string.IsNullOrEmpty(p.Logo))
-                {
-                    logo = File.ReadAllBytes
-                    (
-                        Path.Combine
-                        (
-                            ConfigurationManager.AppSettings["DbFolder"], 
-                            "logo", 
-                            p.Logo
-                        )
-                    );
-                }
+                Product p = dataGridView1.Rows[i].DataBoundItem as Product;                
                 items.Add
                 (
                    new  ProductListPrint
@@ -138,7 +125,7 @@ namespace McExample.WinForms
                        p.Name,
                        p.UnitPrice,
                        p.Picture,
-                       logo
+                       null
                     )
                 );
             }

@@ -171,21 +171,5 @@ namespace McExample.WinForms
         {
             pictureBox1.ImageLocation = null;
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Choose a picture";
-            ofd.Filter = "Image files|*.jpg;*.jpeg;*.png;*.gif";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox2.ImageLocation = ofd.FileName;
-            }
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            pictureBox2.ImageLocation = null;
-        }
     }
 }
