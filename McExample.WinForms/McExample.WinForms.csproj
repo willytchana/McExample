@@ -71,6 +71,12 @@
     <Compile Include="FrmPreview.Designer.cs">
       <DependentUpon>FrmPreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCompanyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompanyEdit.Designer.cs">
+      <DependentUpon>FrmCompanyEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProductEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FrmPreview.resx">
       <DependentUpon>FrmPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompanyEdit.resx">
+      <DependentUpon>FrmCompanyEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductEdit.resx">
       <DependentUpon>FrmProductEdit.cs</DependentUpon>

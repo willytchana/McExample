@@ -18,29 +18,33 @@ namespace McExample.BLL
             this.dbFolder = dbFolder;
             companyRepo = new CompanyDAO(dbFolder);
         }
-        public  void CreateCompany(Company company, string logoFileName)
+        public  void CreateCompany(Company oldCompany, Company newCompany)
         {
-            string filename = !string.IsNullOrEmpty(company.Logo) ? Path.GetFileName(company.Logo): null;
-            if (!string.IsNullOrEmpty(logoFileName))
+            string filename = null;
+            if (!string.IsNullOrEmpty(newCompany.Logo))
             {
-                string ext = Path.GetExtension(logoFileName);
+                string ext = Path.GetExtension(newCompany.Logo);
                 filename = Guid.NewGuid().ToString() + ext;
-                FileInfo fileSource = new FileInfo(logoFileName);
+                FileInfo fileSource = new FileInfo(newCompany.Logo);
                 string filePath = Path.Combine(dbFolder, "logo", filename);
                 FileInfo fileDest = new FileInfo(filePath);
                 if (!fileDest.Directory.Exists)
                     fileDest.Directory.Create();
                 fileSource.CopyTo(fileDest.FullName);
             }
-            company.Logo = filename;
-            companyRepo.Add(company);
+            newCompany.Logo = filename;
+            companyRepo.Add(newCompany);
+
+            if (!string.IsNullOrEmpty(oldCompany.Logo))
+                File.Delete(oldCompany.Logo);
         }
 
         public Company GetCompany()
         {
             Company company =  companyRepo.Get();
-            if (!string.IsNullOrEmpty(company.Logo))
-                company.Logo = Path.Combine(dbFolder, "logo", company.Logo);
+            if (company != null)
+                if (!string.IsNullOrEmpty(company.Logo))
+                    company.Logo = Path.Combine(dbFolder, "logo", company.Logo);
             return company;
         }
     }

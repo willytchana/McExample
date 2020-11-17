@@ -16,7 +16,7 @@ namespace McExample.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProductList());
+            Application.Run(new FrmCompanyEdit());
         }
     }
 }
