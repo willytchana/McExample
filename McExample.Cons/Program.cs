@@ -30,7 +30,7 @@ namespace McExample.Cons
                 Console.Write("Enter tax\t:");
                 float tax = float.Parse(Console.ReadLine());
 
-                Product product = new Product(reference, name, price, tax, null, null);
+                Product product = new Product(reference, name, price, tax, null);
                 ProductBLO productBLO = new ProductBLO(ConfigurationManager.AppSettings["DbFolder"]);
                 productBLO.CreateProduct(product);
 

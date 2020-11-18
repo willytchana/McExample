@@ -37,8 +37,7 @@ namespace McExample.WinForms
             txtTax.Text = product.Tax.ToString();
             if (product.Picture != null)
                 pictureBox1.Image = Image.FromStream(new MemoryStream(product.Picture));
-            if (!string.IsNullOrEmpty(product.Logo))
-                pictureBox2.ImageLocation = Path.Combine(ConfigurationManager.AppSettings["DbFolder"], "logo", product.Logo);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,29 +50,16 @@ namespace McExample.WinForms
             try
             {
                 checkForm();
-                string filename = null;
-                if (!string.IsNullOrEmpty(pictureBox2.ImageLocation))
-                {
-
-                    string ext = Path.GetExtension(pictureBox2.ImageLocation);
-                    filename = Guid.NewGuid().ToString() + ext;
-                    FileInfo fileSource = new FileInfo(pictureBox2.ImageLocation);
-                    string filePath = Path.Combine(ConfigurationManager.AppSettings["DbFolder"], "logo", filename);
-                    FileInfo fileDest = new FileInfo(filePath);
-                    if (!fileDest.Directory.Exists)
-                        fileDest.Directory.Create();
-                    fileSource.CopyTo(fileDest.FullName);
-                }
-
+                
                 Product newProduct = new Product
                 (
                     txtReference.Text.ToUpper(),
                     txtName.Text,
                     double.Parse(txtPrice.Text),
                     float.Parse(txtTax.Text),
-                    !string.IsNullOrEmpty(pictureBox1.ImageLocation) ? File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldProduct?.Picture,
-                    filename
+                    !string.IsNullOrEmpty(pictureBox1.ImageLocation) ? File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldProduct?.Picture
                 );
+
                 ProductBLO productBLO = new ProductBLO(ConfigurationManager.AppSettings["DbFolder"]);
 
                 if (this.oldProduct == null)
@@ -184,22 +170,6 @@ namespace McExample.WinForms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pictureBox1.ImageLocation = null;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Choose a picture";
-            ofd.Filter = "Image files|*.jpg;*.jpeg;*.png;*.gif";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox2.ImageLocation = ofd.FileName;
-            }
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            pictureBox2.ImageLocation = null;
         }
     }
 }

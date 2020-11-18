@@ -1,6 +1,6 @@
 ﻿namespace McExample.WinForms
 {
-    partial class FrmProductEdit
+    partial class FrmCompanyEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtReference = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTax = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPostalCode = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtReference
+            // txtName
             // 
-            this.txtReference.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtReference.Location = new System.Drawing.Point(27, 50);
-            this.txtReference.Name = "txtReference";
-            this.txtReference.Size = new System.Drawing.Size(150, 26);
-            this.txtReference.TabIndex = 0;
+            this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtName.Location = new System.Drawing.Point(27, 50);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(312, 26);
+            this.txtName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Reference*";
+            this.label1.Text = "Name*";
             // 
             // btnCancel
             // 
@@ -78,52 +78,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 104);
+            this.label2.Location = new System.Drawing.Point(23, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Name*";
+            this.label2.Text = "Email";
             // 
-            // txtName
+            // txtEmail
             // 
-            this.txtName.Location = new System.Drawing.Point(27, 127);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(312, 26);
-            this.txtName.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Unit price";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(27, 218);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(150, 26);
-            this.txtPrice.TabIndex = 2;
-            this.txtPrice.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(185, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Tax";
-            // 
-            // txtTax
-            // 
-            this.txtTax.Location = new System.Drawing.Point(189, 218);
-            this.txtTax.Name = "txtTax";
-            this.txtTax.Size = new System.Drawing.Size(150, 26);
-            this.txtTax.TabIndex = 3;
-            this.txtTax.Text = "19,25";
+            this.txtEmail.Location = new System.Drawing.Point(27, 134);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(312, 26);
+            this.txtEmail.TabIndex = 1;
             // 
             // btnSave
             // 
@@ -154,9 +120,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(341, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Picture";
+            this.label5.Text = "Logo";
             // 
             // toolTip1
             // 
@@ -185,35 +151,66 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "(*) Required";
             // 
-            // FrmProductEdit
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Phone number*";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(27, 218);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(146, 26);
+            this.txtPhone.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(188, 195);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Postal code";
+            // 
+            // txtPostalCode
+            // 
+            this.txtPostalCode.Location = new System.Drawing.Point(192, 218);
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(147, 26);
+            this.txtPostalCode.TabIndex = 3;
+            // 
+            // FrmCompanyEdit
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(575, 384);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPostalCode);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtTax);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtReference);
+            this.Controls.Add(this.txtName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "FrmProductEdit";
+            this.Name = "FrmCompanyEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Product edit";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Company edit";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,21 +219,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtReference;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTax;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPostalCode;
     }
 }
 

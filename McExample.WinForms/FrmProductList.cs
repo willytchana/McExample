@@ -18,11 +18,13 @@ namespace McExample.WinForms
     public partial class FrmProductList : Form
     {
         private ProductBLO productBLO;
+        private CompanyBLO companyBLO;
         public FrmProductList()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             productBLO = new ProductBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            companyBLO = new CompanyBLO(ConfigurationManager.AppSettings["DbFolder"]);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -114,31 +116,23 @@ namespace McExample.WinForms
         private void btnPrint_Click(object sender, EventArgs e)
         {
             List<ProductListPrint> items = new List<ProductListPrint>();
+            Company company = companyBLO.GetCompany();
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Product p = dataGridView1.Rows[i].DataBoundItem as Product;
-                byte[] logo = null;
-                if(!string.IsNullOrEmpty(p.Logo))
-                {
-                    logo = File.ReadAllBytes
-                    (
-                        Path.Combine
-                        (
-                            ConfigurationManager.AppSettings["DbFolder"], 
-                            "logo", 
-                            p.Logo
-                        )
-                    );
-                }
                 items.Add
                 (
-                   new  ProductListPrint
-                   ( 
+                   new ProductListPrint
+                   (
                        p.Reference,
                        p.Name,
                        p.UnitPrice,
                        p.Picture,
-                       logo
+                       company?.Name,
+                       company?.Email,
+                       company?.PhoneNumber.ToString(),
+                       company?.PostalCode,
+                       !string.IsNullOrEmpty(company?.Logo) ? File.ReadAllBytes(company?.Logo) : null
                     )
                 );
             }
