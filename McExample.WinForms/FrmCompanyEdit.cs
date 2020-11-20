@@ -60,7 +60,6 @@ namespace McExample.WinForms
 
                 Close();
 
-
             }
             catch (TypingException ex)
             {
